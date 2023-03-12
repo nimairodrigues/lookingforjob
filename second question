@@ -1,0 +1,24 @@
+int x1 = 0;
+		int x2 = 1;
+		int x = 0;
+		int fib[] = new int [10];
+		boolean fibb = false;
+		
+		System.out.println("digite um número: ");
+		Scanner tec = new Scanner(System.in);
+		int number = tec.nextInt();
+		
+		for(int c = 0; c<10; c++) {
+			x = x1 + x2;
+			x1 = x2;
+			x2 = x;
+			fib[c] = x;
+			if(number == fib[c]) {
+				fibb = true;
+			}		
+		}
+		if (fibb) {
+			System.out.println("Esse numero pertence a sequencia fibonacci");
+		} else {
+			System.out.println("Esse numero nao pertence a sequencia fibonacci");
+		}
